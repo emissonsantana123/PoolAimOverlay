@@ -1,18 +1,22 @@
-# PoolAimOverlay
+# Pool Aim Overlay (Android)
 
-Aplicativo Android simples com mira visual flutuante transparente e controles de ângulo/comprimento. Não lê a tela do jogo, não altera o jogo e não automatiza tacadas.
+Aplicativo Android nativo de mira visual manual para treino. Não lê a tela do jogo, não automatiza tacadas e não interage com contas.
 
-## Gerar APK pelo GitHub (celular)
-1. Crie um repositório GitHub vazio chamado `PoolAimOverlay`.
-2. Envie todos os arquivos desta pasta para a raiz do repositório, mantendo a pasta `.github/workflows`.
-3. Abra a aba **Actions** e execute **Build PoolAimOverlay APK** (ou aguarde o build após enviar para `main`).
-4. Abra a execução concluída e baixe o artefato `PoolAimOverlay-debug`.
-5. Extraia o ZIP do artefato e instale `app-debug.apk`.
+## Abrir e gerar APK
+1. Instale o Android Studio em um computador.
+2. Abra a pasta `PoolAimOverlay` no Android Studio.
+3. Aguarde a sincronização do Gradle.
+4. Use **Build > Build APK(s)**.
+5. O APK de depuração ficará em `app/build/outputs/apk/debug/app-debug.apk`.
+6. Instale no Android e abra **Pool Aim Overlay**.
+7. Toque em **Permitir sobreposição**, habilite a permissão nas configurações do Android e volte ao app.
+8. Toque em **Iniciar mira flutuante**. Depois abra o 8 Ball Pool.
 
-## Uso
-1. Abra Pool Aim Overlay.
-2. Toque em **ATIVAR MIRA E ABRIR JOGO**.
-3. Na tela de permissão do Android, permita **Exibir sobre outros apps** e volte ao aplicativo.
-4. A mira e o painel flutuante devem aparecer ao abrir o 8 Ball Pool. Use Ângulo +/- e Mira +/-; **Ocultar** alterna a linha e **Fechar** encerra a sobreposição.
+## Controles
+- Arraste o círculo verde para reposicionar a origem.
+- Arraste o marcador vermelho para mudar ângulo e comprimento.
+- Use as barras do painel para ajustes finos.
+- Arraste o título do painel para movê-lo.
+- Ocultar mira ou fechar encerra a camada visual.
 
-O identificador de pacote esperado do jogo é `com.miniclip.eightballpool`. Se a versão instalada usar outro identificador ou o jogo não for encontrado, abra o jogo manualmente após ativar a mira.
+A sobreposição depende da permissão do Android e pode variar conforme o fabricante e as políticas do jogo. A linha é uma referência visual, não uma previsão precisa da física do jogo.
